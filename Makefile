@@ -8,6 +8,7 @@ SRC = ./src/minishell.c\
 	  ./src/env/env.c\
 	  ./src/env/env_tools.c\
 	  ./src/signals/signals.c\
+	  ./src/builtin/cd.c\
 
 OBJ = $(SRC:.c=.o)
 

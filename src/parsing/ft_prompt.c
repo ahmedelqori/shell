@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:33:37 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/04 15:23:39 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/04 17:03:47 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char    *ft_search_in_env(char *key,t_env *env)
             return (ft_strdup(env->value));        
         }
         env = env->next;
-
     }
     return (NULL);
 }
@@ -55,6 +54,9 @@ char    *ft_prompt(t_env *env)
 
     current_dir = current_path(env);
     prompt = ft_strjoin(BOLDYELLOW MINISHELL_PROMPT RESET, current_dir); 
+    free(current_dir);
+    current_dir = prompt;
+    prompt = ft_strjoin(current_dir, " ");
     free(current_dir);
     return (prompt);
 }

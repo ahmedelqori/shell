@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:22:12 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/04 15:45:17 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/04 16:56:05 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@
 #define MINISHELL_PROMPT "MiniShell $> "
 #define HOME "HOME"
 #define PWD "PWD"
+#define OLDPWD "OLDPWD"
 
 // struct 
 
@@ -64,6 +65,10 @@ char    *ft_getvalue_env(char *str);
 void    ft_lst_inert(t_env **env, t_env *node);
 t_env *ft_env(char **env);
 
+
+// built in
+
+void    ft_cd(t_env **env, char *path);
 
 
 // signals
