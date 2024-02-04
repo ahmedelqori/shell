@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:22:12 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/04 15:23:16 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/04 15:45:17 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,17 @@ void    ft_lst_env_addback(t_env **env, t_env *node);
 char    *ft_getvalue_env(char *str);
 void    ft_lst_inert(t_env **env, t_env *node);
 t_env *ft_env(char **env);
+
+
+
+// signals
+
+void    ft_signals(void);
+
+
 // parsing
+
+
 
 char    *ft_prompt(t_env *env);
 
