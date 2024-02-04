@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 14:13:32 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/04 14:42:43 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/04 15:19:22 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char    *ft_getkey_env(char *str)
     while (str[++i])
         if (str[i] == '=')
             break;
-    key = malloc(sizeof(char) * i);
+    key = malloc(sizeof(char) * (i + 1));
     if (key == NULL)
         return (NULL);
     j = 0;
