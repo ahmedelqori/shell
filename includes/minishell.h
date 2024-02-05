@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:22:12 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/04 16:56:05 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/05 13:59:14 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void    ft_signals(void);
 
 // parsing
 
-
+char    **ft_separate(char *str);
 
 char    *ft_prompt(t_env *env);
 

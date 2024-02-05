@@ -5,6 +5,7 @@ RM = rm -rf
 
 SRC = ./src/minishell.c\
 	  ./src/parsing/ft_prompt.c\
+	  ./src/parsing/ft_separate.c\
 	  ./src/env/env.c\
 	  ./src/env/env_tools.c\
 	  ./src/signals/signals.c\
