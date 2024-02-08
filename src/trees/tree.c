@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:14:14 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/08 10:59:56 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/08 14:17:26 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_tree *ft_new_tree(char *s)
 	return (node);
 }
 
+
 void	ft_tree_insert(t_tree **root, t_tree *node)
 {
 	t_tree *cur;
@@ -39,8 +40,12 @@ void	ft_tree_insert(t_tree **root, t_tree *node)
 		
 		if (cur->left == NULL)
 			cur->left = node;
-		else if (cur->right == NULL)
+		else if (cur->right == NULL && ft_strncmp("|",cur->command,1))
 			cur->right = node;
+		else
+		{
+			ft_tree_insert(&cur->left , node);
+		}
 	}
 	else
 		ft_tree_insert(&cur->right , node);
