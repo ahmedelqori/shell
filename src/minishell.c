@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:26:35 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/08 11:01:07 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/08 14:00:13 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ void    print_tree(t_tree *root)
 {
     if (root == NULL)
         return;
-    printf("root: %s\n",root->command);
+    printf(BOLDRED"root: %s\n"RESET,root->command);
     if (root->left)
     {
-        printf("root: %s || left: %s\n",root->command, root->left->command);
+        printf(BOLDGREEN"root: %s "BOLDBLUE "|| left: %s\n" RESET,root->command, root->left->command);
         print_tree(root->left);
     }
     if (root->right)
     {
-        printf("root: %s || right: %s\n",root->command, root->right->command);
+        printf(BOLDGREEN"root: %s "BOLDBLUE "|| right: %s\n" RESET,root->command, root->right->command);
         print_tree(root->right);
     }
 }
