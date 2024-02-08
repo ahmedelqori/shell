@@ -11,6 +11,7 @@ SRC = ./src/minishell.c\
 	  ./src/signals/signals.c\
 	  ./src/builtin/cd.c\
 	  ./src/parsing/ft_pars.c\
+	  ./src/trees/tree.c\
 
 OBJ = $(SRC:.c=.o)
 

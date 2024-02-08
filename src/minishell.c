@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:26:35 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/08 09:44:36 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/08 11:01:07 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,23 @@ void    print_arr(char **arr)
     printf("\n");
 }
 
+void    print_tree(t_tree *root)
+{
+    if (root == NULL)
+        return;
+    printf("root: %s\n",root->command);
+    if (root->left)
+    {
+        printf("root: %s || left: %s\n",root->command, root->left->command);
+        print_tree(root->left);
+    }
+    if (root->right)
+    {
+        printf("root: %s || right: %s\n",root->command, root->right->command);
+        print_tree(root->right);
+    }
+}
+
 int main(int ac, char **av, char **env_list)
 {
     t_env *env;
@@ -28,7 +45,9 @@ int main(int ac, char **av, char **env_list)
     char    *command;
     char    *prompt;
     char    **arr;
+    t_tree *root;
 
+    root = NULL;
     while (1)
     {
         ft_signals();
@@ -38,7 +57,10 @@ int main(int ac, char **av, char **env_list)
             exit(1);
         // ft_cd(&env,command);
         arr = ft_separate(command);
-        print_arr(arr);
+        // print_arr(arr);
+        root = create_tree(arr);
+        // printf("Root: %s\n",root->command);
+        print_tree(root);
         add_history(command);   
         free(prompt);
         free(command);     

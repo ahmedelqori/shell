@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 13:22:12 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/08 09:19:19 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:43:24 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,12 @@ char    **ft_separate(char *str);
 
 char    *ft_prompt(t_env *env);
 
+typedef struct s_tree
+{
+    char    *command;
+    struct s_tree *left;
+    struct s_tree *right;
+} t_tree;
 
+t_tree *create_tree(char **arr);
 #endif
